@@ -46,7 +46,9 @@ const Login = () => {
         dispatch(setUser(data.user));
         navigate("/");
       }
-      toast(data.message);
+      console.log(data);
+
+      toast(data.message || data.code);
     } catch (error) {
       toast(error.message);
     }
